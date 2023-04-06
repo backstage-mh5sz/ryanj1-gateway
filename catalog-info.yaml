@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ryanj1-poi-gateway-app-dev
+  annotations:
+    argocd/app-name: ryanj1-poi-gateway-app-dev
+    backstage.io/kubernetes-id: ryanj1-poi-gateway-app-dev
+    backstage.io/kubernetes-namespace: ryanj1
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=ryanj1-poi-gateway-app-dev'
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: backstage-mh5sz/ryanj1-gateway
+  tags:
+    - java
+    - quarkus
+    - maven
+    - workshop
+  links:
+    - url: https://devspaces.apps.cluster-2w7cf.2w7cf.sandbox1883.opentlc.com/#https://github.com/backstage-mh5sz/ryanj1-gateway?che-editor=che-incubator/che-code/insiders&devfilePath=.devfile-vscode.yaml
+      title: CodeReady Workspaces (VS Code)
+      icon: web
+    - url: https://devspaces.apps.cluster-2w7cf.2w7cf.sandbox1883.opentlc.com/#https://github.com/backstage-mh5sz/ryanj1-gateway?che-editor=che-incubator/che-idea/next&devfilePath=.devfile-intellij.yaml
+      title: CodeReady Workspaces (JetBrains IntelliJ)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "rhdeveloper-workshop-authors"
